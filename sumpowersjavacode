@@ -1,0 +1,38 @@
+\iffalse
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
+
+class Main {
+  public static void main(String[] args) {
+    List<Integer> list = new ArrayList<>();
+    int n = 0;
+    int counter = 0;
+    for(n = 0; n <= 1000; n++)
+    {
+      counter = 0;
+      for(int i = 0; i <= 100; i++)
+      {
+        for(int j = 0; j <= 100; j++)
+        {
+          for(int k = 0; k <= 100; k++)
+          {
+            int a = 1 * i * i;
+            int b = 1 * j * j;
+            int c = 2 * k * k;
+            if(n - a - b - c == 0)
+            {
+              if(counter == 0)
+              {
+                list.add(n);
+                counter++;
+              }
+            }
+          }
+        }
+      }
+    }
+    System.out.println(list);
+  }
+}
+\fi
